@@ -35,9 +35,39 @@ public class Controller {
 			return number*factorial(number-1);
 	}
 	
-//	public static int PGCD(int[]arNumber)
-//	{
-//		
-//	}
+	public static int PGCD(int aNumber,int bNumber)
+	{
+		int pgcd,res=aNumber%bNumber;
+		while(aNumber==0 || bNumber==0)
+		{
+			return -1;
+		}
+		if(aNumber<bNumber)
+		{
+			int temp=aNumber;
+			aNumber=bNumber;
+			bNumber=temp;
+		}
+		else if(aNumber==bNumber)
+		{
+			pgcd=aNumber;
+			return pgcd;
+		}
+		else
+		{
+			while(res!=0)
+			{
+				aNumber=bNumber;
+				bNumber=res;
+				res=aNumber%bNumber;
+			}
+			if (res==0)
+			{
+				pgcd=bNumber;
+				return pgcd;
+			}
+		}
+		return -1;
+	}
 
 }

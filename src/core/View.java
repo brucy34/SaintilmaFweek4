@@ -35,6 +35,13 @@ public class View {
 		return choice;
 	}
 	
+//	public static int number()
+//	{
+//		
+//		
+//
+//	}
+	
 	
 	
 	public static void isPrime(int result)
