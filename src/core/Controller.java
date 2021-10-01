@@ -26,5 +26,10 @@ public class Controller {
     
 		
 	}
+	
+	public static int PGCD(int[]arNumber)
+	{
+		
+	}
 
 }
