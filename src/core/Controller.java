@@ -27,9 +27,17 @@ public class Controller {
 		
 	}
 	
-	public static int PGCD(int[]arNumber)
+	public static int factorial(int number)
 	{
-		
+		if(number==0)
+			return 1;
+		else
+			return number*factorial(number-1);
 	}
+	
+//	public static int PGCD(int[]arNumber)
+//	{
+//		
+//	}
 
 }

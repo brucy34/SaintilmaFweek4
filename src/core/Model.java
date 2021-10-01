@@ -23,6 +23,12 @@ public class Model {
 			System.out.println("Ce nombre est premier");
 	}
 	
+	public static void response1()
+	{
+		int result=Controller.factorial(number);
+		System.out.println("Le factorielle de ce nombre est"+result);
+	}
+	
 	public static void choiceOfFonc()
 	{
 		switch(View.choice())
@@ -33,6 +39,12 @@ public class Model {
 				 Controller.primeNumber(number);
 				 response();
 			   }break;
+		case 2:{
+			     System.out.println("Entrez le nombre");
+			     number=View.scan().nextInt();
+			     Controller.primeNumber(number);
+			     response1();
+		       }
 		}
 	}
 }

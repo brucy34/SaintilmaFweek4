@@ -15,6 +15,7 @@ public class View {
 	
 	public static void menu()
 	{
+		System.out.println("\n=====================================================================================================");
 		System.out.println("Soyez le/la bienvenu(e) dans ce petit programme");
 		System.out.println("\n Veuillez choisir une fonctionnalite");
 		System.out.println("\n1.-Tester la primalite d'un nombre\n"+
@@ -23,6 +24,7 @@ public class View {
 							 "4.-Calculer le PPMC de n entiers\n"+
 						     "5.-Effectuer la recherche dans une liste\n"+
 							 "6.-Empiler et depiler une liste par la methode LIFO");
+		System.out.println("=====================================================================================================");
 		
 	}
 	
