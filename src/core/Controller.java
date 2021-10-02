@@ -1,4 +1,5 @@
 package core;
+import java.util.*;
 
 public class Controller {
 	
@@ -105,5 +106,50 @@ public class Controller {
 		return ppmc;
 	}
 	
+	public static ArrayList aList(int []tab)
+	{
+		 ArrayList number=new ArrayList();
+		 for(int p=0;p<tab.length;p++)
+		   {
+			   for(int i=1;i<tab.length-p;i++)
+			   {
+				   int temp;
+				   if(tab[i-1]>tab[i])
+				   {
+					   temp=tab[i-1];
+					   tab[i-1]=tab[i];
+					   tab[i]=temp;
+				   }   
+			   }
+           }
+		 
+		 for(int i=0;i<tab.length;i++)
+		 {
+			number.add(tab[i]);
+		 }
+		 return number;
+	}
+	
+	public static int search(int number)
+	{
+		 int inf=1,sup=tab.length,center=(inf+sup)/2;
+		  boolean trouv=true;
+		  
+		
+		while(!trouv && inf <= sup)
+		  {
+			  if(tab[center]==number)
+			  {
+				trouv=true;
+			  }
+			  else if(number<tab[center])
+				sup= center-1;
+			  else
+				inf=center+1;
+			
+			center=(inf+sup)/2;
+		  }
+		
+	}
 
 }
