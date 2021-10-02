@@ -46,6 +46,15 @@ public class Model {
 			System.out.println("Le pgcd de ces nombres est "+result);
 	}
 	
+	public static void response3()
+	{
+		int result=Controller.PPMC(tab);
+		if(result==-1)
+			System.out.println("On ne peut calculer ce ppmc");
+		else
+			System.out.println("Le ppmc de ces nombres est "+result);
+	}
+	
 	public static void choiceOfFonc()
 	{
 		switch(View.choice())
@@ -72,6 +81,17 @@ public class Model {
 			     }
 			     Controller.PGCD(tab);
 			     response2();
+			   }break;
+		case 4:{
+			     System.out.println("Entrez la quantite de nombre");
+			     tab=new int [View.scan().nextInt()];
+		         System.out.println("Veuillez entrez les nombres");
+		         for(int i=0;i<tab.length;i++)
+		         {
+		    	    tab[i]=View.scan().nextInt();
+		         }
+		         Controller.PPMC(tab);
+		         response3();
 			   }break;
 		}
 	}

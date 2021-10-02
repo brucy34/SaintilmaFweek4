@@ -37,7 +37,7 @@ public class Controller {
 	
 	public static int PGCD(int aNumber,int bNumber)
 	{
-		int pgcd,res=aNumber%bNumber;
+		int pgcd,res;
 		while(aNumber==0 || bNumber==0)
 		{
 			return -1;
@@ -53,8 +53,7 @@ public class Controller {
 			pgcd=aNumber;
 			return pgcd;
 		}
-		if(aNumber>bNumber)
-		{
+		res=aNumber%bNumber;
 			while(res!=0)
 			{
 				aNumber=bNumber;
@@ -66,7 +65,6 @@ public class Controller {
 				pgcd=bNumber;
 				return pgcd;
 			}
-		}
 		return -1;
 	}
 	
@@ -79,5 +77,33 @@ public class Controller {
 		}
 		return pgcd;
 	}
+	
+	public static int PPMC(int aNumber,int bNumber)
+	{
+		int ppmc;
+		if(aNumber==bNumber)
+		{
+			ppmc=0;
+			return ppmc;
+		}
+		else
+		{
+			ppmc=(aNumber*bNumber)/PGCD(aNumber,bNumber);
+			return ppmc;
+		}
+		
+		
+	}
+	
+	public static int PPMC(int[] tab)
+	{
+		int ppmc=PPMC(tab[0],tab[1]);
+		for(int i=2;i<tab.length;i++)
+		{
+			ppmc=PPMC(ppmc,tab[i]);
+		}
+		return ppmc;
+	}
+	
 
 }
