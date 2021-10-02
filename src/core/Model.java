@@ -39,7 +39,7 @@ public class Model {
 	
 	public static void response2()
 	{
-		int result=Controller.PGCD(number, number1);
+		int result=Controller.PGCD(tab);
 		if(result==-1)
 			System.out.println("On ne peut calculer ce pgcd");
 		else
@@ -63,10 +63,14 @@ public class Model {
 			     response1();
 		       }break;
 		case 3:{
+				 System.out.println("Entrez la quantite de nombre");
+				 tab=new int [View.scan().nextInt()];
 			     System.out.println("Veuillez entrez les nombres");
-			     number=View.scan().nextInt();
-			     number1=View.scan().nextInt();
-			     Controller.PGCD(number, number1);
+			     for(int i=0;i<tab.length;i++)
+			     {
+			    	 tab[i]=View.scan().nextInt();
+			     }
+			     Controller.PGCD(tab);
 			     response2();
 			   }break;
 		}

@@ -53,7 +53,7 @@ public class Controller {
 			pgcd=aNumber;
 			return pgcd;
 		}
-		else
+		if(aNumber>bNumber)
 		{
 			while(res!=0)
 			{
@@ -68,6 +68,16 @@ public class Controller {
 			}
 		}
 		return -1;
+	}
+	
+	public static int PGCD(int[] tab)
+	{
+		int pgcd=PGCD(tab[0],tab[1]);
+		for(int i=2;i<tab.length;i++)
+		{
+			pgcd=PGCD(pgcd,tab[i]);
+		}
+		return pgcd;
 	}
 
 }
